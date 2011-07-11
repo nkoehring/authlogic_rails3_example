@@ -1,0 +1,7 @@
+-@notes.each do |note|
+  .note
+    =image_tag note.attachment.url(:thumb), :style => "float:left; margin-right:1em;"
+    %h2=h note.title
+    %p=h note.content
+
+  %hr( style="clear:left" )

@@ -2,7 +2,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.xml
   def index
-    @notes = Note.all
+    @notes = current_user.notes
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +41,7 @@ class NotesController < ApplicationController
   # POST /notes.xml
   def create
     @note = Note.new(params[:note])
+    @note.user_id = current_user.id
 
     respond_to do |format|
       if @note.save
