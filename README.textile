@@ -1,0 +1,5 @@
+h1. Spaß mit Rails3
+
+Einfache Anwendung zur Verwaltung von Texten.
+Grundlage der Anwendung ist https://github.com/trevmex/authlogic_rails3_example
+
