@@ -1,6 +1,7 @@
 AuthlogicRails3Example::Application.routes.draw do |map|
+  resources :notes
   resources :users
-  
+
   get    'login(.:format)'  => 'user_session#new',     :as => :login
   post   'login(.:format)'  => 'user_session#create',  :as => :login
   delete 'logout(.:format)' => 'user_session#destroy', :as => :logout
